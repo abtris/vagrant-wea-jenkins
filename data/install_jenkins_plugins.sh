@@ -1,8 +1,8 @@
-sudo apt-get install python-software-properties
+#sudo apt-get install python-software-properties
 
-wget -q -O - http://pkg.jenkins-ci.org/debian-stable/jenkins-ci.org.key | sudo apt-key add -
-sudo add-apt-repository "deb http://pkg.jenkins-ci.org/debian-stable binary/"
-sudo apt-get update
+#wget -q -O - http://pkg.jenkins-ci.org/debian-stable/jenkins-ci.org.key | sudo apt-key add -
+#sudo add-apt-repository "deb http://pkg.jenkins-ci.org/debian-stable binary/"
+#sudo apt-get update
 sudo apt-get install jenkins
 
 wget http://localhost:8080/jnlpJars/jenkins-cli.jar
