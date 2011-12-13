@@ -6,10 +6,10 @@ sudo pear channel-discover pear.docblox-project.org
 sudo pear upgrade
 sudo pear install theseer/Autoload
 sudo pear install pear.phpqatools.org/phpqatools PHPDocumentor
-
+sudo pear install phpunit/DbUnit
 sudo pear config-set preferred_state beta
 sudo pear install docblox/DocBlox
-sudo pear install phpunit/DbUnit
-sudo apt-get install php5-mysql
-sudo apt-get install php5-sqlite
+
 sudo apt-get install graphviz
+sudo apt-get install php5-sqlite
+sudo apt-get install php5-xsl
