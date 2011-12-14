@@ -13,3 +13,4 @@ sudo pear install docblox/DocBlox
 sudo apt-get install graphviz
 sudo apt-get install php5-sqlite
 sudo apt-get install php5-xsl
+sudo chown -R jenkins:nogroup /var/www/
