@@ -1,8 +1,6 @@
 # sudo su - jenkins
+# export JAVA_HOME=/usr/lib/jvm/java-6-sun
 cd /var/lib/jenkins
 mkdir slave/ bin/
 cd bin 
 wget http://localhost:8080/jnlpJars/slave.jar
-echo '#!/bin/sh'> run.sh
-echo 'exec java -jar /var/lib/jenkins/bin/slave.jar' >> run.sh 
-chmod +x run.sh
