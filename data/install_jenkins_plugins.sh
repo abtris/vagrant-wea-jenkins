@@ -20,6 +20,7 @@ java -jar jenkins-cli.jar -s http://localhost:8080 install-plugin git
 java -jar jenkins-cli.jar -s http://localhost:8080 install-plugin greenballs
 java -jar jenkins-cli.jar -s http://localhost:8080 install-plugin jobConfigHistory
 java -jar jenkins-cli.jar -s http://localhost:8080 install-plugin build-pipeline-plugin
-
+java -jar jenkins-cli.jar -s http://localhost:8080 install-plugin disk-usage
+java -jar jenkins-cli.jar -s http://localhost:8080 install-plugin configurationslicing
 
 java -jar jenkins-cli.jar -s http://localhost:8080 safe-restart
