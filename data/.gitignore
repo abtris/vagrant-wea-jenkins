@@ -2,4 +2,5 @@ vendor
 jenkins-cli.jar
 jenkins
 hiphop
-
+composer.lock
+id_rsa*
