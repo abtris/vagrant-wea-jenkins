@@ -1,0 +1,3 @@
+curl -sS https://getcomposer.org/installer | php
+https://raw.github.com/h4cc/phpqatools/master/composer.json
+php composer.phar install

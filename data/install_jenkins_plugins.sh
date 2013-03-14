@@ -23,5 +23,7 @@ java -jar jenkins-cli.jar -s http://localhost:8080 install-plugin build-pipeline
 java -jar jenkins-cli.jar -s http://localhost:8080 install-plugin join
 java -jar jenkins-cli.jar -s http://localhost:8080 install-plugin disk-usage
 java -jar jenkins-cli.jar -s http://localhost:8080 install-plugin configurationslicing
+java -jar jenkins-cli.jar -s http://localhost:8080 install-plugin promoted-builds
+java -jar jenkins-cli.jar -s http://localhost:8080 install-plugin email-ext
 
 java -jar jenkins-cli.jar -s http://localhost:8080 safe-restart

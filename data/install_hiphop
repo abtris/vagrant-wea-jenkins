@@ -1,0 +1,8 @@
+echo 'deb http://dl.hiphop-php.com/ubuntu precise main' >hiphop
+sudo cp hiphop /etc/apt/sources.list.d/hiphop.list
+sudo apt-get update
+sudo apt-get install hiphop-xhp
+
+
+sudo pear channel-discover pear.phpunit.de
+sudo pear install pear.phpunit.de/hphpa
