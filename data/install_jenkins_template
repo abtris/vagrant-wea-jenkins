@@ -1,5 +1,1 @@
-#sudo su - jenkins
-cd /var/lib/jenkins/jobs
-git clone git://github.com/sebastianbergmann/php-jenkins-template.git php-template
-chown -R jenkins:nogroup php-template/
-echo "please reload configuratin\n"
+wget https://raw.github.com/sebastianbergmann/php-jenkins-template/master/config.xml | java -jar jenkins-cli.jar -s http://localhost:8080/ create-job php-template
