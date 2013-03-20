@@ -1,8 +1,8 @@
 #
 # Cookbook Name:: apt
-# Recipe:: cacher-ng
+# Recipe:: cacher
 #
-# Copyright 2008-2012, Opscode, Inc.
+# Copyright 2008-2011, Opscode, Inc.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -16,22 +16,29 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-
-package "apt-cacher-ng" do
+package "apt-cacher" do
   action :install
 end
 
-template "/etc/apt-cacher-ng/acng.conf" do
-  source "acng.conf.erb"
-  owner "root"
-  group "root"
-  mode 00644
-  notifies :restart, "service[apt-cacher-ng]"
+service "apt-cacher" do
+  supports :restart => true, :status => false
+  action [ :enable, :start ]
 end
 
-service "apt-cacher-ng" do
-  supports :restart => true, :status => false
-  action [:enable, :start]
+cookbook_file "/etc/apt-cacher/apt-cacher.conf" do
+  source "apt-cacher.conf"
+  owner "root"
+  group "root"
+  mode 0644
+  notifies :restart, resources(:service => "apt-cacher")
+end
+
+cookbook_file "/etc/default/apt-cacher" do
+  source "apt-cacher"
+  owner "root"
+  group "root"
+  mode 0644
+  notifies :restart, resources(:service => "apt-cacher")
 end
 
 #this will help seed the proxy
