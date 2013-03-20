@@ -1,6 +1,6 @@
 # sudo su - jenkins
 # export JAVA_HOME=/usr/lib/jvm/java-6-sun
-cd /var/lib/jenkins
+cd /vagrant
 mkdir slave/ bin/
 cd bin 
-wget http://localhost:8080/jnlpJars/slave.jar
+wget http://33.33.33.10:8080/jnlpJars/slave.jar

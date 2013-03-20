@@ -10,8 +10,5 @@ sudo pear install phpunit/DbUnit
 sudo pear config-set preferred_state beta
 sudo pear install docblox/DocBlox
 
-sudo apt-get install graphviz
-sudo apt-get install php5-sqlite
-sudo apt-get install php5-xsl
-sudo apt-get install php5-curl
+sudo apt-get install -y graphviz php5-sqlite php5-xsl php5-curl
 sudo chown -R jenkins:nogroup /var/www/
