@@ -22,7 +22,7 @@ Vagrant.configure("2") do |config|
     slave.vm.provision :chef_solo do |chef|
       chef.add_recipe "apt"
       chef.add_recipe "java"    
-      chef.add_recipe "jenkins::node_ssh"
+      chef.add_recipe "jenkins::node_jnlp"
     end
     slave.vm.network :private_network, ip: "33.33.33.20"
   end
