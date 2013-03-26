@@ -106,7 +106,7 @@ when "ubuntu", "debian"
 
   when "ubuntu"
     include_recipe "apt"
-    include_recipe "java"
+    include_recipe "java::openjdk"
 
     apt_repository "jenkins" do
       uri "http://pkg.jenkins-ci.org/debian-stable"
